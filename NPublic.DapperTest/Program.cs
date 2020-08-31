@@ -13,8 +13,8 @@ namespace NPublic.DapperTest
     {
         static void Main(string[] args)
         {
-            string ConnectionStr = "server=(local);UID=dxwang;PWD=qq520223;database=test";
-            string mysqlhost = "Host = ; UserName = root; Password = @; Database = KLine; Port = 3316; CharSet = utf8; Allow Zero Datetime = true;";
+            string ConnectionStr = "server=(local);UID=sa;PWD=sa;database=test";
+            string mysqlhost = "Host = 127.0.0.1; UserName = root; Password = @; Database = KLine; Port = 3316; CharSet = utf8; Allow Zero Datetime = true;";
 
             NDapper dbss = DapperManager.CreateDatabase(ConnectionStr, DBType.SqlServer);
             ConnectionState state = dbss.State();
