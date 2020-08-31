@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPublic.DI", "NPublic.DI\NP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPublic.DapperCore", "NPublic.DapperCore\NPublic.DapperCore.csproj", "{08AC405E-2983-4254-8379-D6270D342E55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPublic.TestCore", "NPublic.TestCore\NPublic.TestCore.csproj", "{2C9F46BC-AFA1-4C61-A57B-EBFFCAD764E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPublic.TestCore", "NPublic.TestCore\NPublic.TestCore.csproj", "{2C9F46BC-AFA1-4C61-A57B-EBFFCAD764E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPublic.Test", "NPublic.Test\NPublic.Test.csproj", "{598DC0C1-29FF-4676-9114-242C61A15879}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPublic.DapperCoreDemo", "NPublic.DapperCoreDemo\NPublic.DapperCoreDemo.csproj", "{DF66BFC1-3DEA-48A5-AA57-D161A34CD5D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{598DC0C1-29FF-4676-9114-242C61A15879}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{598DC0C1-29FF-4676-9114-242C61A15879}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{598DC0C1-29FF-4676-9114-242C61A15879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF66BFC1-3DEA-48A5-AA57-D161A34CD5D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF66BFC1-3DEA-48A5-AA57-D161A34CD5D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF66BFC1-3DEA-48A5-AA57-D161A34CD5D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF66BFC1-3DEA-48A5-AA57-D161A34CD5D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
