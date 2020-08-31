@@ -1,0 +1,32 @@
+﻿/*
+logConfig File
+Place in the root directory
+
+Filelog string.Format("{0}{1}{2}{3}{4}", addtime,title,msg,exception,ip);
+*/
+[
+  {
+    "Type": "File",
+    "DetailConfig": {
+      "enable": true,
+      "savePath": "log",
+      "txtFormat": "{0} - {1}\r\n{2}:{3}\r\n{4}\r\n\r\n",
+      "warningRegex": "警告|warn",
+      "fatalRegex": "fatal|严重|错误"
+    }
+  },
+  {
+    "Type": "MQ",
+    "DetailConfig": {
+      "enable": true,
+      "ConnectionString": "MQ2"
+    }
+  },
+  {
+    "Type": "DB",
+    "DetailConfig": {
+      "enable": false,
+      "ConnectionString": "db2"
+    }
+  }
+]
