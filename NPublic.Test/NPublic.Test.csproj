@@ -54,7 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NPublic.Logger\NPublic.Logger.csproj">
-      <Project>{5980d10e-c2f2-4766-a62e-bd93ad5d7852}</Project>
+      <Project>{2e537a5d-2922-4da3-b936-d060ad4a0914}</Project>
       <Name>NPublic.Logger</Name>
     </ProjectReference>
   </ItemGroup>

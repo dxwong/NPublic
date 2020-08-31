@@ -1,6 +1,7 @@
-﻿using Microsoft.Data.Sqlite;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
+using System.Data.SQLite;
+//using Oracle.ManagedDataAccess.Client;需要请自行引用NuGet包
 
 /// <summary>
 /// dxwang
@@ -22,7 +23,7 @@ namespace NPublic.Dapper
             if (dbType == DBType.SqlLite)
             {
                 strconn = string.Format("Data Source={0}", strconn);
-                return new NDapper(new SqliteConnection(strconn));
+                return new NDapper(new SQLiteConnection(strconn));
             }
 
             if (dbType == DBType.MySql)

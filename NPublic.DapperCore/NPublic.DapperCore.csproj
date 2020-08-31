@@ -13,7 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NPublic.Logger\NPublic.Logger.csproj" />
+    <ProjectReference Include="..\NPublic.DICore\NPublic.DICore.csproj" />
+    <ProjectReference Include="..\NPublic.LoggerCore\NPublic.LoggerCore.csproj" />
   </ItemGroup>
 
 </Project>
