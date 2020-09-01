@@ -12,8 +12,13 @@ namespace NPublic.Logger
         /// <param name="exception">异常</param>
         /// <param name="title">日志标题</param>
         /// <param name="titleDetail">详细提示，如SQL来源</param>
-        public void Write(string exception, string title, string titleDetail = "", LogLevel level = LogLevel.Auto)
-        {
+        public void Write(string exception, string title="", string titleDetail = "", LogLevel level = LogLevel.Auto)
+        { 
+            if (level == LogLevel.Skip)
+            {
+                return;//允许客户端判断日志是否写入
+            }
+
             if (level == LogLevel.Auto && CheckFatal(exception))
             {
                 level = LogLevel.Fatal;
@@ -21,6 +26,10 @@ namespace NPublic.Logger
             else if (level == LogLevel.Auto && CheckWarning(exception))
             {
                 level = LogLevel.Warning;
+            }
+            else if (level == LogLevel.Auto && CheckSkip(exception))
+            {
+                return;//Skip如果
             }
 
             _que.Enqueue(new LogMessage
@@ -39,6 +48,18 @@ namespace NPublic.Logger
             }
         }
 
+        /// <summary>
+        /// CheckSkip
+        /// </summary>
+        /// <param name="level"></param>
+        /// <param name="ex"></param>
+        /// <param name="title"></param>
+        /// <param name="message"></param>
+        static bool CheckSkip(string exception)
+        {
+            string pattern = NLog.config["File"].SkipRegex;
+            return pattern == "" ? false : Regex.IsMatch(exception, pattern, RegexOptions.IgnoreCase);
+        }
 
         /// <summary>
         /// CheckWarning

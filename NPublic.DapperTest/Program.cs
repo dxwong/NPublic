@@ -17,15 +17,17 @@ namespace NPublic.DapperTest
             string mysqlhost = "Host = 127.0.0.1; UserName = root; Password = @; Database = KLine; Port = 3316; CharSet = utf8; Allow Zero Datetime = true;";
 
             NDapper dbss = DapperManager.CreateDatabase(ConnectionStr, DBType.SqlServer);
-            ConnectionState state = dbss.State();
+            var state = dbss.State();
             var list = dbss.Query<KLine>("select id,symbol from pp2009_min10");
 
             NDapper dbss1 = DapperManager.CreateDatabase(ConnectionStr, DBType.SqlServer);
-            var list1 = dbss1.Query<KLine>("select id,symbol from pp2009_min11");
+            var list1 = dbss1.QueryAsync<KLine>("select id,symbol from pp2009_min11");
 
             NDapper dbss2 = DapperManager.CreateDatabase(ConnectionStr, DBType.SqlServer);
             var list2 = dbss2.Query<KLine>("select id,symbol from pp2009_min12");
 
+            KLine k = new KLine();
+            dbss2.Query<KLine>("select UserName,Email from User  where UserId=@UserId", new KLine() {  ID=1});
 
             NDapper dbSqlLite = DapperManager.CreateDatabase(@"symbo3.db", DBType.SqlLite);
             //ConnectionState DapperState = dbSqlLite.State();

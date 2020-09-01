@@ -8,12 +8,13 @@ namespace NPublic.Logger
     /// </summary>
     public enum LogLevel
     {
-        Auto = 0,
-        Debug = 1,
-        Info = 2,
-        Error = 3,
-        Warning = 4,
-        Fatal = 5
+        Skip = 0,
+        Auto = 1,
+        Debug = 2,
+        Info = 3,
+        Error = 4,
+        Warning = 5,
+        Fatal = 6
     }
 
     /// <summary>
@@ -40,6 +41,7 @@ namespace NPublic.Logger
         public bool Enable { get; set; }
         public string TxtFormat { get; set; }
         public string SavePath { get; set; }
+        public string SkipRegex { get; set; }
         public string WarningRegex { get; set; }
         public string FatalRegex { get; set; }
         public string ConnectionString { get; set; }
