@@ -1,4 +1,4 @@
- 找工之余，对代码进行整理，开源项目说明  
+ 找工之余，对代码进行整理开源（虚线部分表示未完成)
 ![image](http://122.114.170.153:8181/Public/images/NPublic.png)
 
 一、NDapper(数据库操作)  
@@ -37,7 +37,7 @@
 （该部分代码完善中）  
 
 五、NPublic.UI(winform皮肤，插件)（整理中...）  
-轻量级，扁平化皮肤。可轻松实现类似QQ播放器，360软件等界面  
+轻量级，扁平化皮肤。可轻松实现类似QQ播放器，360软件等界面。  
  ![image](http://122.114.170.153:8181/Public/images/f1.png)  
  ![image](http://122.114.170.153:8181/Public/images/f2.png)  
  ![image](http://122.114.170.153:8181/Public/images/f3.png)  
