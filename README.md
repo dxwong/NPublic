@@ -1,4 +1,4 @@
- 找工之余，对代码进行整理开源。开发架构图（虚线部分表示未完成)
+ 找工之余，对代码进行整理
 ![image](http://122.114.170.153:8181/Public/images/NPublic.png)
 
 一、NDapper(数据库操作)  
@@ -25,7 +25,7 @@
 
 三、NDI（轻型IOC容器）  
 轻量级，依赖注入容器，便于系统集成  
- ![image](http://122.114.170.153:8181/Public/images/NDI.png)  
+ ![image](http://122.114.170.153:8181/Public/images/NDI2.png)  
 除了项目内部类注册，也可以对其他项目编译的DLL直接注入  
 
 四、NSocket（TCP通讯）（整理中...）  
